@@ -1,0 +1,26 @@
+name: PHP CodeSniffer check
+
+on:
+  push:
+    paths:
+      - "**.php"
+
+  pull_request:
+    paths:
+      - "**.php"
+      -
+permissions:
+  contents: read
+
+jobs:
+  phpcs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install PHP Code Sniffer
+        run: |
+          composer require --dev squizlabs/php_codesniffer
+      - name: Check coding standards
+        run: vendor/bin/phpcs
