@@ -5,7 +5,7 @@ volumes:
 
 services:
 
-  dev-bugebo-api:
+  web:
     container_name: dev-bugebo-api
     build: ./docker
     ports:
@@ -14,16 +14,15 @@ services:
       - ./:/var/www/html
       - ./docker/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
 
-  dev-bugebo-db:
+  database:
     image: mariadb:10.9
     container_name: dev-bugebo-db
     ports:
       - "13306:3306"
     environment:
-      - MARIADB_USER=root
-      - MARIADB_PASSWORD=root
-      - MARIADB_ROOT_PASSWORD=root
-    command: --init-file /data/application/init.sql
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db
+      MYSQL_USER: db
+      MYSQL_PASSWORD: db
     volumes:
       - dev-bugebo-db-data:/var/lib/mysql
-      - ./docker/init.sql:/data/application/init.sql
