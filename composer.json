@@ -29,9 +29,16 @@
     },
     "require": {
         "php": "^8.1",
+        "ext-json": "*",
         "ext-pdo": "*",
         "composer/package-versions-deprecated": "^1.11.99.4",
-        "doctrine/migrations": "^3.5"
+        "doctrine/migrations": "^3.5",
+        "envms/fluentpdo": "^2.2.0",
+        "laminas/laminas-diactoros": "^2.11",
+        "laminas/laminas-httphandlerrunner": "^2.1",
+        "laminas/laminas-session": "^2.13",
+        "league/container": "^4.2",
+        "league/route": "^5.1"
     },
     "require-dev": {
         "jetbrains/phpstorm-attributes": "^1.0",
