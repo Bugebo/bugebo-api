@@ -36,7 +36,6 @@
         "envms/fluentpdo": "^2.2.0",
         "laminas/laminas-diactoros": "^2.11",
         "laminas/laminas-httphandlerrunner": "^2.1",
-        "laminas/laminas-session": "^2.13",
         "league/container": "^4.2",
         "league/route": "^5.1"
     },

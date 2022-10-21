@@ -27,19 +27,20 @@ einfacher ist.
 2. Entweder [Composer](https://getcomposer.org/) installieren, wenn es das nicht schon ist oder die *.phar Datei herunterladen
    und `composer install` ausführen
 3. Wenn [Docker](https://www.docker.com/) installiert ist: 
+     - kopieren Sie `config/autoload/database.php.dist` und benennen Sie es in `database.php` um.
      - `./scripts/start`
      - `./scripts/seed`
 
    Wenn [DDEV](https://ddev.readthedocs.io/en/stable/) installiert ist:
      - `ddev config`
      - die ddev Konfiguration `.ddev/config.yaml` auf PHP 8.1 anpassen
-     - Datenbankkonfiguration unter `config/migrations/migrations.db` anpassen
+     - kopieren Sie `config/autoload/database.php.dist` und benennen Sie es in `database.php` um. Geben Sie dann die Anmeldedaten für die Datenbank ein
      - `ddev start`
      - `php bin/migrations.php migrations:sync-metadata-storage`
      - `php bin/migrations.php migrations:migrate`
 
    Wenn ein lokaler Webserver mit Datenbank bereits eingerichtet ist, z.Bsp. [XAMPP](https://www.apachefriends.org/de/index.html)
-     - Datenbankkonfiguration unter `config/migrations/migrations.db` anpassen
+     - kopieren Sie `config/autoload/database.php.dist` und benennen Sie es in `database.php` um. Geben Sie dann die Anmeldedaten für die Datenbank ein
      - `php bin/migrations.php migrations:sync-metadata-storage`
      - `php bin/migrations.php migrations:migrate`
 
@@ -70,18 +71,19 @@ quasi "own" framework. No, not really, but I think it's easier for inexperienced
 2. either install [composer](https://getcomposer.org/) if it is not already or download the *.phar file
    and run `composer install`
 3. if [Docker](https://www.docker.com/) is installed:
+   - copy `config/autoload/database.php.dist` and rename it to `database.php`.
    - `./scripts/start`
    - `./scripts/seed`
 
    If [DDEV](https://ddev.readthedocs.io/en/stable/) is installed:
    - `ddev config`
    - change the ddev configuration `.ddev/config.yaml` to PHP 8.1
-   - adjust database configuration under `config/migrations/migrations.db`.
+   - copy `config/autoload/database.php.dist` and rename it to `database.php`. Then enter the credentials for the database
    - `ddev start`
    - `php bin/migrations.php migrations:sync-metadata-storage`
    - `php bin/migrations.php migrations:migrate`
 
    If a local web server with database is already set up, e.g. [XAMPP](https://www.apachefriends.org/de/index.html)
-   - Adjust database configuration under `config/migrations/migrations.db`.
+   - copy `config/autoload/database.php.dist` and rename it to `database.php`. Then enter the credentials for the database
    - `php bin/migrations.php migrations:sync-metadata-storage`
    - `php bin/migrations.php migrations:migrate`
