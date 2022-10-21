@@ -46,6 +46,7 @@ body:
     id: additional-context
     attributes:
       label: Zusätzlicher Kontext / Additional Context
-      description: "Optional: weitere Informationen über das Problem: Protokollmeldungen, Screenshots usw.
-                    Optional: any other context about the problem: log messages, screenshots, etc."
+      description: |
+        Optional: weitere Informationen über das Problem: Protokollmeldungen, Screenshots usw.
+        Optional: any other context about the problem: log messages, screenshots, etc.
 
