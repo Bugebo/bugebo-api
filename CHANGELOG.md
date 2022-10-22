@@ -1,7 +1,7 @@
 <!--
 Entry with Issues, Pull Request, Author
 Example:
-- new time entry added [#0000] [!0000] [@BibaltiK]
+- new time entry added #0000 !0000 @BibaltiK
 -->
 # Changelog for the bugebo/bugebo-api Project
 
@@ -22,8 +22,7 @@ Example:
 ## Unreleased
 
 ### Added
-
-   - create project structure with dependencies (docker, paper, etc) #2 [#3] [4#] [#5] [!1] [@BibaltiK]
+   - create project structure with dependencies (docker, paper, etc) #2, #3, 4#, #5 !1 @BibaltiK
 
 <!-- ### Changed --><!-- for changes in existing functionality. -->
 
