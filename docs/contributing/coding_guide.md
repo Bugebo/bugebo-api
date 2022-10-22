@@ -16,7 +16,7 @@ Beispiel:
 namespace Vendor\Package;
 ```
 Für die Überprüfung der Einhaltung benutzen wir den [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) eine 
-[Konfiguration](https://github.com/Bugebo/bugebo-api/blob/master/phpcs.xml) liegt dem Projekt bei.
+[Konfiguration](./../../phpcs.xml) liegt dem Projekt bei.
 
 Für die syntaktische Korrektheit nutzen wir zur Prüfung [PHPLint](https://github.com/overtrue/phplint).
 
@@ -49,7 +49,7 @@ Example:
 namespace Vendor\Package;
 ```
 For compliance checking we use the [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) a 
-[configuration](https://github.com/Bugebo/bugebo-api/blob/master/phpcs.xml) is included with the project.
+[configuration](./../../phpcs.xml) is included with the project.
 
 For syntactical correctness we use [PHPLint](https://github.com/overtrue/phplint) for checking.
 
