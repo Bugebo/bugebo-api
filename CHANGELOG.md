@@ -22,7 +22,7 @@ Example:
 ## Unreleased
 
 ### Added
-    - create project structure with dependencies (docker, paper, etc) [#2] [#3] [4#] [#5] [!1] [@BibaltiK]
+    - create project structure with dependencies (docker, paper, etc) #2 [#3] [4#] [#5] [!1] [@BibaltiK]
 
 <!-- ### Changed --><!-- for changes in existing functionality. -->
 
