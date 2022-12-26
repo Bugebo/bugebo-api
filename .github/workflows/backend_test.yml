@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  unit test:
+  unit_test:
     runs-on: ubuntu-latest
 
     steps:
