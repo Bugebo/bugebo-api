@@ -6,7 +6,7 @@ Wir benutzen und halten uns hier an die akzeptieren PSR von [PHP-FIG](https://ww
 ## Code-Stil
 
 Für die Formatierung vom Code halten wir uns an den [PSR-12](https://www.php-fig.org/psr/psr-12/) mit aber einem kleinen
-Aber: Entgegengesetzt von [PSR-12](https://www.php-fig.org/psr/psr-12/) fügen wir `declare(strict_types=1);` in die erste
+Aber: Entgegengesetzt von [PSR-12](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-12-extended-coding-style-guide.md) fügen wir `declare(strict_types=1);` in die erste
 Zeile ein.
 
 Beispiel:
