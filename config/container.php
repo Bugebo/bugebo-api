@@ -7,7 +7,7 @@ use League\Container\Container;
 return function (Container $container) {
     $container->add(Container::class, $container);
 
-    $container->add(PDO::class, function () use ($container) {
+    $container->add(PDO::class, function ($container) {
         return (new PDOFactory)($container);
     });
 
