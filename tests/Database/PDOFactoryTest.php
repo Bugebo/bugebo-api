@@ -7,10 +7,16 @@ use League\Container\Container;
 use PDO;
 use PDOException;
 use PHPUnit\Framework\TestCase;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\NotFoundExceptionInterface;
 
 class PDOFactoryTest extends TestCase
 {
 
+    /**
+     * @throws ContainerExceptionInterface
+     * @throws NotFoundExceptionInterface
+     */
     public function testThrowPDOException(): void
     {
         $this->expectException(PDOException::class);
