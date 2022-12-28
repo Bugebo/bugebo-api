@@ -5,5 +5,4 @@ extensions:
   - php
 exclude:
   - vendor
-warning: false
-memory_limit: -1
+warning: true
