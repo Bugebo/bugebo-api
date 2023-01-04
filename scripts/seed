@@ -1,2 +1,2 @@
 #!/bin/bash
-docker exec dev-bugebo-api php bin/migrations.php migrations:sync-metadata-storage
+docker exec bugebo-dev-web php bin/migrations.php migrations:sync-metadata-storage

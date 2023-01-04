@@ -1,4 +1,4 @@
 #!/bin/bash
 docker-compose up -d
-docker exec dev-bugebo-api composer install
+docker exec bugebo-dev-api composer install
 sh ./scripts/seed

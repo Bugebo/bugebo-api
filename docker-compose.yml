@@ -1,22 +1,22 @@
 version: "3"
 
-volumes:
-  dev-bugebo-db-data:
-
 services:
 
   web:
-    container_name: dev-bugebo-api
+    container_name: bugebo-dev-web
     build: ./docker
+    depends_on:
+      - database
     ports:
-      - "18080:80"
+      - "18080:8080"
     volumes:
       - ./:/var/www/html
+      - ./docker/httpd.conf:/usr/local/apache2/conf/httpd.conf
       - ./docker/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
 
   database:
     image: mariadb:10.9
-    container_name: dev-bugebo-db
+    container_name: bugebo-dev-db
     ports:
       - "13306:3306"
     environment:
@@ -25,4 +25,7 @@ services:
       MYSQL_USER: db
       MYSQL_PASSWORD: db
     volumes:
-      - dev-bugebo-db-data:/var/lib/mysql
+      - dev-db-data:/var/lib/mysql
+
+volumes:
+  dev-db-data:
