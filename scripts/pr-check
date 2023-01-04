@@ -1,5 +1,5 @@
 #!/bin/bash
-docker exec bugebo-dev-web composer run phpcs
-docker exec bugebo-dev-web composer run phplint
-docker exec bugebo-dev-web composer run phpstan
-docker exec bugebo-dev-web composer run test
+docker exec bugebo-dev-api composer run phpcs
+docker exec bugebo-dev-api composer run phplint
+docker exec bugebo-dev-api composer run phpstan
+docker exec bugebo-dev-api composer run test

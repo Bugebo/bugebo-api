@@ -2,8 +2,8 @@ version: "3"
 
 services:
 
-  web:
-    container_name: bugebo-dev-web
+  api:
+    container_name: bugebo-dev-api
     build: ./docker
     depends_on:
       - database
