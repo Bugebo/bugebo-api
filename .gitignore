@@ -2,9 +2,13 @@
 /tests/behat.yml
 /tests/.phpunit.result.cache
 /vendor/
-/node_modules/
+/client/node_modules/
 /public/assets/*
 *.cache
-*-cache
 *.phar
 .ddev
+/public/*.html
+/database/structure/update*.sql
+/public/api/doc/swagger.json
+/.env
+coverage.xml
