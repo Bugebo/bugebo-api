@@ -1,6 +1,10 @@
 <?php declare(strict_types=1);
-
-$db = (require __DIR__ . '/../autoload/database.php')['database'];
+$filePath = __DIR__ . '/../autoload/';
+if (file_exists($filePath . 'database.global.php')) {
+    $db = (require $filePath . 'database.global.php')['database'];
+} else {
+    $db = (require $filePath . 'database.global.php.dist')['database'];
+}
 
 return [
     'dbname' => $db['dbname'],

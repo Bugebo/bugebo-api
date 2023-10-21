@@ -36,10 +36,14 @@ $storageConfiguration->setExecutionTimeColumnName($config['table_storage']['exec
 
 $configuration->setMetadataStorageConfiguration($storageConfiguration);
 
+$container = require_once __DIR__ . '/../config/container.php';
+
 $dependencyFactory = DependencyFactory::fromConnection(
     new ExistingConfiguration($configuration),
     new ExistingConnection($connection)
 );
+
+$dependencyFactory->setService(Psr\Container\ContainerInterface::class, $container);
 
 $cli = new Application('Doctrine Migrations');
 $cli->setCatchExceptions(true);

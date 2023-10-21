@@ -17,43 +17,87 @@
     "config": {
         "sort-packages": true,
         "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "composer/package-versions-deprecated": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "laminas/laminas-component-installer": true
+        },
+        "platform": {
+            "php": "8.2.0"
         }
     },
-    "scripts": {
-        "phplint": "vendor/bin/phplint",
-        "phpcs": "phpcs --standard=phpcs.xml -s",
-        "phpstan": "vendor/bin/phpstan analyse -c phpstan.neon --xdebug",
-        "test": "XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-text"
+    "extra": {
+        "laminas": {
+            "component-whitelist": [
+                "mezzio/mezzio",
+                "mezzio/mezzio-helpers",
+                "mezzio/mezzio-router",
+                "laminas/laminas-httphandlerrunner",
+                "mezzio/mezzio-fastroute"
+            ]
+        }
     },
     "require": {
-        "php": "^8.1",
+        "php": "~8.2.0",
         "ext-json": "*",
+        "ext-openssl": "*",
         "ext-pdo": "*",
-        "composer/package-versions-deprecated": "^1.11.99.4",
-        "doctrine/migrations": "^3.5",
-        "envms/fluentpdo": "^2.2.0",
-        "laminas/laminas-diactoros": "^2.11",
-        "laminas/laminas-httphandlerrunner": "^2.1",
-        "league/container": "^4.2",
-        "league/route": "^5.1"
+        "composer/package-versions-deprecated": "^1.10.99",
+        "doctrine/migrations": "^3.6",
+        "envms/fluentpdo": "^2.2",
+        "jetbrains/phpstorm-attributes": "^1.0",
+        "laminas/laminas-component-installer": "^2.6 || ^3.0",
+        "laminas/laminas-config-aggregator": "^1.6",
+        "laminas/laminas-diactoros": "^2.24.2",
+        "laminas/laminas-servicemanager": "^3.4",
+        "laminas/laminas-stdlib": "^3.6",
+        "mezzio/mezzio": "^3.7",
+        "mezzio/mezzio-fastroute": "^3.0.3",
+        "mezzio/mezzio-helpers": "^5.7",
+        "ramsey/uuid": "^4.7",
+        "zircote/swagger-php": "^4.7"
     },
     "require-dev": {
-        "jetbrains/phpstorm-attributes": "^1.0",
-        "overtrue/phplint": "^5.3",
-        "phpstan/phpstan": "^1.4",
-        "phpunit/phpunit": "^9.5",
-        "squizlabs/php_codesniffer": "^3.6"
+        "filp/whoops": "^2.7.1",
+        "laminas/laminas-development-mode": "^3.3.0",
+        "mezzio/mezzio-tooling": "^2.8",
+        "overtrue/phplint": "^9.0",
+        "phpstan/phpstan": "^1.10",
+        "phpunit/php-code-coverage": "^9.2",
+        "phpunit/phpunit": "^9.5.11",
+        "roave/security-advisories": "dev-master",
+        "squizlabs/php_codesniffer": "^3.7"
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "Bugebo\\App\\": "src/App/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": "tests/"
+            "Bugebo\\AppTest\\": "tests/AppTest/"
         }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "@development-enable"
+        ],
+        "development-disable": "laminas-development-mode disable",
+        "development-enable": "laminas-development-mode enable",
+        "development-status": "laminas-development-mode status",
+        "mezzio": "laminas --ansi",
+        "clear-config-cache": "php bin/clear-config-cache.php",
+        "enable-codestandard": "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run",
+        "doctrine": "php ./bin/migrations.php",
+        "openapi": "php ./vendor/bin/openapi ./src -f json -o ./public/api/docs/swagger.json",
+        "phplint": "vendor/bin/phplint",
+        "phpcs": "phpcs --standard=phpcs.xml -s",
+        "phpstan": "vendor/bin/phpstan analyse -c phpstan.neon",
+        "test": "XDEBUG_MODE=coverage ./vendor/bin/phpunit",
+        "check": [
+            "@phplint",
+            "@phpcs",
+            "@phpstan",
+            "@test"
+        ]
     }
 }

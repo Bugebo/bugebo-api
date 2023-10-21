@@ -1,16 +1,14 @@
-<?php declare(strict_types=1);
+<?php
 
-use App\Database\PDOFactory;
-use Envms\FluentPDO\Query;
-use League\Container\Container;
+declare(strict_types=1);
 
-return function (Container $container) {
-    $container->add(Container::class, $container);
+use Laminas\ServiceManager\ServiceManager;
 
-    $container->add(PDO::class, function ($container) {
-        return (new PDOFactory)($container);
-    });
+// Load configuration
+$config = require __DIR__ . '/config.php';
 
-    $container->add(Query::class)
-        ->addArgument(PDO::class);
-};
+$dependencies                       = $config['dependencies'];
+$dependencies['services']['config'] = $config;
+
+// Build container
+return new ServiceManager($dependencies);

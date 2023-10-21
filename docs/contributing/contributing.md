@@ -8,14 +8,14 @@ für Nicht-Programmierer einiges zu tun (Text Korrekturen, Übersetzungen, Desig
 
 Um sich bei diesen Projekt einzubringen wird ein [GitHub Konto](https://github.com/) benötigt.
 Damit Ihr euch der Organisation anschliessen könnt um somit eure Änderungen direkt im Repository
-einzureichen. Klar könnt Ihr auch mit einem [Fork](https://docs.github.com/de/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks) 
+einzureichen. Klar könnt Ihr auch mit einem [Fork](https://docs.github.com/de/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks)
 arbeiten, einfacher ist es aber euch auf dem [Discord Server](https://discord.gg/5BUFEJBBdW) zu melden, dann
 erhaltet Ihr einen Einladungslink.
 
 # Was wird alles benötigt
 
 Wie bereits erwähnt ein [GitHub Konto](https://github.com/).
-Für die Kommunikation ist [Discord](https://discord.com/) nützlich um sich auf unseren [Discord Server](https://discord.gg/5BUFEJBBdW) 
+Für die Kommunikation ist [Discord](https://discord.com/) nützlich um sich auf unseren [Discord Server](https://discord.gg/5BUFEJBBdW)
 verbinden zu können.
 Je nachdem was Ihr hier machen wollt, die entsprechenden Tools.
 Für eine lokale Umgebung wird aber [Git](https://git-scm.com/) und [Docker](https://www.docker.com/products/docker-desktop/)
