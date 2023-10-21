@@ -1,2 +1,0 @@
-#!/bin/bash
-docker exec bugebo-dev-api php bin/migrations.php migrations:sync-metadata-storage

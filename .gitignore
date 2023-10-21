@@ -2,7 +2,6 @@
 /tests/behat.yml
 /tests/.phpunit.result.cache
 /vendor/
-/client/node_modules/
 /public/assets/*
 *.cache
 *.phar
@@ -12,3 +11,7 @@
 /public/api/doc/swagger.json
 /.env
 coverage.xml
+/.phpcs-cache
+/.phpunit.result.cache
+/clover.xml
+/coveralls-upload.json
