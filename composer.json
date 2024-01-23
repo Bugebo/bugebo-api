@@ -88,16 +88,23 @@
         "clear-config-cache": "php bin/clear-config-cache.php",
         "enable-codestandard": "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run",
         "doctrine": "php ./bin/migrations.php",
-        "openapi": "php ./vendor/bin/openapi ./src -f json -o ./public/api/docs/swagger.json",
-        "phplint": "vendor/bin/phplint",
-        "phpcs": "phpcs --standard=phpcs.xml -s",
+        "openapi": "php ./vendor/bin/openapi ./src -f json -o ./public/api/doc/swagger.json",
+        "phplint": "phplint -c .phplint.yml --no-cache",
+        "phpcs": "phpcs --standard=phpcs.xml --extensions=php --tab-width=4 -sp src tests",
+        "phpcbf": "phpcbf --standard=phpcs.xml --extensions=php --tab-width=4 -sp src tests",
         "phpstan": "vendor/bin/phpstan analyse -c phpstan.neon",
-        "test": "XDEBUG_MODE=coverage ./vendor/bin/phpunit",
+        "unittest": "XDEBUG_MODE=coverage ./vendor/bin/phpunit --colors=always --configuration phpunit_unittest.xml",
+        "functionaltest": "XDEBUG_MODE=coverage ./vendor/bin/phpunit --colors=always --configuration phpunit_functionaltest.xml",
+        "test": [
+            "@unittest",
+            "@functionaltest"
+        ],
         "check": [
             "@phplint",
             "@phpcs",
             "@phpstan",
-            "@test"
+            "@unittest",
+            "@functionaltest"
         ]
     }
 }
