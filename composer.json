@@ -62,8 +62,8 @@
         "mezzio/mezzio-tooling": "^2.8",
         "overtrue/phplint": "^9.0",
         "phpstan/phpstan": "^1.10",
-        "phpunit/php-code-coverage": "^9.2",
-        "phpunit/phpunit": "^9.5.11",
+        "phpunit/php-code-coverage": "^10",
+        "phpunit/phpunit": "^10.0",
         "roave/security-advisories": "dev-master",
         "slevomat/coding-standard": "^8.14",
         "squizlabs/php_codesniffer": "^3.7"
@@ -75,7 +75,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Bugebo\\AppTest\\": "tests/AppTest/"
+            "Bugebo\\Test\\": "tests"
         }
     },
     "scripts": {

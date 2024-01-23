@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Bugebo\AppTest\Mock;
+namespace Bugebo\Test\Unit\Mock;
 
 use Psr\Container\ContainerInterface;
 

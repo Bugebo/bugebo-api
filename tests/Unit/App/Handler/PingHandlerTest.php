@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Bugebo\AppTest\Handler;
+namespace Bugebo\Test\Unit\App\Handler;
 
 use Bugebo\App\Handler\PingHandler;
 use Laminas\Diactoros\Response\JsonResponse;

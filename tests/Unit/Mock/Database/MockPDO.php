@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Bugebo\AppTest\Mock\Database;
+namespace Bugebo\Test\Unit\Mock\Database;
 
 use PDO;
 

@@ -1,12 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace Bugebo\AppTest\Factory;
+namespace Bugebo\Test\Unit\App\Factory;
 
 use Bugebo\App\Factory\DatabaseFactory;
-use Bugebo\AppTest\Mock\MockContainer;
 use PDO;
 use PDOException;
 use PHPUnit\Framework\TestCase;
+use Bugebo\Test\Unit\Mock\MockContainer;
 
 class DatabaseFactoryTest extends TestCase
 {

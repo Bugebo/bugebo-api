@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace Bugebo\AppTest\Factory;
+namespace Bugebo\Test\Unit\App\Factory;
 
 use Bugebo\App\Factory\QueryFactory;
-use Bugebo\AppTest\Mock\Database\MockPDO;
-use Bugebo\AppTest\Mock\MockContainer;
 use Envms\FluentPDO\Query;
 use PDO;
 use PHPUnit\Framework\TestCase;
+use Bugebo\Test\Unit\Mock\Database\MockPDO;
+use Bugebo\Test\Unit\Mock\MockContainer;
 
 class QueryFactoryTest extends TestCase
 {
